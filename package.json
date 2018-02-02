@@ -1,0 +1,35 @@
+{
+  "name": "sebastian-carousel",
+  "version": "1.0.0",
+  "description": "Carousel animation plugin",
+  "main": "index.html",
+  "scripts": {
+    "test": "karma start karma.conf.js",
+    "start": "gulp dev"
+  },
+  "keywords": [
+    "CSS3",
+    "JavaScript",
+    "HTML5"
+  ],
+  "author": "Sebastian Lopez <sebas@sebaswebdev.com>",
+  "license": "UNLICENCED",
+  "devDependencies": {
+    "autoprefixer": "^7.2.5",
+    "cssnano": "^3.10.0",
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-jslint": "^1.0.10",
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "jasmine-core": "^2.9.1",
+    "karma": "^2.0.0",
+    "karma-coverage": "^1.1.1",
+    "karma-jasmine": "^1.1.1",
+    "karma-junit-reporter": "^1.2.0",
+    "karma-mocha-reporter": "^2.2.5",
+    "karma-phantomjs-launcher": "^1.0.4"
+  }
+}
