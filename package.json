@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "test": "karma start karma.conf.js",
-    "start": "gulp dev"
+    "start": "gulp dev",
+    "setup": "npm install && gulp"
   },
   "keywords": [
     "CSS3",

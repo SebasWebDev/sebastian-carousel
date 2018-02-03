@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sebastian Lopez | Carousel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/sebastian-carousel.css" rel="stylesheet" type="text/css">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+        html * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header h1 {
+            text-align: center;
+        }
+        article {
+            width: 100%;
+        }
+        section {
+            width: 100%;
+            max-width: 1110px;
+            padding: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+        }
+        section.fullwidth {
+            max-width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        @media screen and (max-width: 767px){
+            section {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<article>
+    <header><h1>Sebastian Carousel JS</h1></header>
+    <section class="fullwidth">
+        <section>
+            <h2>Full Width carousel</h2>
+        </section>
+        <div id="home-carousel" data-sc data-sc-theme="fullwidth" data-sc-autostart="true">
+            <div>
+                <img src="img/home1.jpg">
+            </div>
+            <div>
+                <img src="img/home2.jpg">
+            </div>
+            <div>
+                <img src="img/home3.jpg">
+            </div>
+            <div>
+                <img src="img/home4.jpg">
+            </div>
+            <div>
+                <img src="img/home5.jpg">
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>Carousel with editorial</h2>
+        <p>The slide effect is created with CSS. It's an optional effect.</p>
+        <div data-sc data-sc-theme="editorial" data-sc-effect="slide">
+            <div>
+                <div class="caption">Lorem ipsum</div>
+                <img src="img/dest1.png">
+            </div>
+            <div>
+                <div class="caption">Lorem ipsum</div>
+                <img src="img/dest2.png">
+            </div>
+            <div>
+                <div class="caption">Lorem ipsum</div>
+                <img src="img/dest3.png">
+            </div>
+            <div>
+                <div class="caption">Lorem ipsum</div>
+                <img src="img/dest4.png">
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>Carousel with Content</h2>
+        <p>Dark theme</p>
+        <div data-sc data-sc-theme="content-dark">
+            <div data-sc-slider>
+                <div>
+                    <img src="img/soci1.png">
+                </div>
+                <div>
+                    <img src="img/soci2.png">
+                </div>
+                <div>
+                    <img src="img/soci3.png">
+                </div>
+                <div>
+                    <img src="img/soci4.png">
+                </div>
+                <div>
+                    <img src="img/soci5.png">
+                </div>
+            </div>
+            <div data-sc-content>
+                Lorem ipsum
+            </div>
+        </div>
+        <p>Light theme</p>
+        <div data-sc data-sc-theme="content-light">
+            <div data-sc-slider>
+                <div>
+                    <img src="img/soci1.png">
+                </div>
+                <div>
+                    <img src="img/soci2.png">
+                </div>
+                <div>
+                    <img src="img/soci3.png">
+                </div>
+                <div>
+                    <img src="img/soci4.png">
+                </div>
+                <div>
+                    <img src="img/soci5.png">
+                </div>
+            </div>
+            <div data-sc-content>
+                Lorem ipsum
+            </div>
+        </div>
+    </section>
+</article>
+<script src="js/sebastian-carousel.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<testsuite name="PhantomJS 2.1.1 (Windows 8.0.0)" package="" timestamp="2018-02-03T00:42:03" id="0" hostname="Asus" tests="13" errors="0" failures="0" time="0">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1"/>
+  </properties>
+  <testcase name="Sebastian Caruousel plugin should throw an error if no element is passed" time="0" classname="Sebastian Caruousel plugin"/>
+  <testcase name="Sebastian Caruousel plugin Setup should set the carousel as full width" time="0" classname="Sebastian Caruousel plugin"/>
+  <testcase name="Sebastian Caruousel plugin Setup should activate the first slide" time="0" classname="Sebastian Caruousel plugin"/>
+  <testcase name="Sebastian Caruousel plugin Setup should set timer if the option is passed" time="0" classname="Sebastian Caruousel plugin"/>
+  <testcase name="Sebastian Caruousel plugin Slide should go to a specified slide" time="0" classname="Sebastian Caruousel plugin"/>
+  <testcase name="Sebastian Caruousel plugin Slide should show the previous slide" time="0" classname="Sebastian Caruousel plugin"/>
+  <testcase name="Sebastian Caruousel plugin Timers should set an interval" time="0" classname="Sebastian Caruousel plugin"/>
+  <testcase name="Sebastian Caruousel plugin Timers should stop an interval" time="0" classname="Sebastian Caruousel plugin"/>
+  <testcase name="Sebastian Caruousel plugin Timers should reset an interval" time="0" classname="Sebastian Caruousel plugin"/>
+  <testcase name="Sebastian Caruousel plugin Utility functions should validate the effect options" time="0" classname="Sebastian Caruousel plugin"/>
+  <testcase name="Sebastian Caruousel plugin Utility functions should validate boolean options" time="0" classname="Sebastian Caruousel plugin"/>
+  <testcase name="Sebastian Caruousel plugin Utility functions should validate the interval option" time="0" classname="Sebastian Caruousel plugin"/>
+  <testcase name="Sebastian Caruousel plugin Utility functions should validate the theme option" time="0" classname="Sebastian Caruousel plugin"/>
+  <system-out>
+    <![CDATA[PhantomJS 2.1.1 (Windows 8.0.0) LOG: 'DOM fully loaded and parsed'
+,PhantomJS 2.1.1 (Windows 8.0.0) LOG: 'interval', null
+
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>
