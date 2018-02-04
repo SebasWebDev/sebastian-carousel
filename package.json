@@ -2,7 +2,7 @@
   "name": "sebastian-carousel",
   "version": "1.0.0",
   "description": "Carousel animation plugin",
-  "main": "index.html",
+  "main": "./src/js/sebastian-carousel.js",
   "scripts": {
     "test": "karma start karma.conf.js",
     "start": "gulp dev",
