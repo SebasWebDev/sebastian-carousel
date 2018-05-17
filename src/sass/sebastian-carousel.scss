@@ -5,6 +5,12 @@ $desktop-min: 1024px !default;
 $blue: #10ace7;
 $darkBlue: #003145;
 $grey: #c2deea;
+[data-sc]:not(.sebas-carousel) {
+  overflow-y: hidden;
+  > * {
+    visibility: hidden;
+  }
+}
 .sebas-carousel {
   box-sizing: border-box;
   * {

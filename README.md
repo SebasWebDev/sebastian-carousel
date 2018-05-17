@@ -53,7 +53,16 @@ To apply the script to an element, add the attribute `data-sc` and that's it.
 
 ### Additional settings ###
 
+| Attribute            | Default           | Possible values                                           |
+| -------------------- | ------------------| --------------------------------------------------------- |
+| `data-sc-theme`      | fullwidth         | fullwidth, content-dark, content-light, social, editorial |
+| `data-sc-interval`   | 3000              | integer                                                   |
+| `data-sc-autostart`  | false             | boolean                                                   |
+| `data-sc-pagination` | true              | boolean                                                   |
+| `data-sc-effect`     | fade              | fade, slide                                               |
+
 Example using configuration for theme and autostart:
+
 ```html
 <div data-sc data-sc-theme="fullwidth" data-sc-autostart="true">
     <div>
@@ -74,37 +83,33 @@ Example using configuration for theme and autostart:
 </div>
 ```
 
-| Attribute            | Default           | Possible values  |
-| -------------------- | ------------------| ---------------- |
-| `data-sc-theme`      | fullwidth         | fade, slide      |
-| `data-sc-interval`   | 3000              | integer          |
-| `data-sc-autostart`  | false             | boolean          |
-| `data-sc-pagination` | true              | boolean          |
-| `data-sc-effect`     | fade              | boolean          |
 
+The editorial theme allows you to add a caption to your pictures:
 
-### Setup for development ###
-
-`npm run setup`
-
-After running that command, open the index.html file in any browser.
-
-## Develop ##
-
-`npm start`
-
-## Run tests ##
-
-`npm test`
-
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
+```html
+<div data-sc data-sc-theme="editorial" data-sc-effect="slide">
+    <div>
+        <div class="caption">Lorem ipsum</div>
+        <img src="img/dest1.png">
+    </div>
+    <div>
+        <div class="caption">Lorem ipsum</div>
+        <img src="img/dest2.png">
+    </div>
+    <div>
+        <div class="caption">Lorem ipsum</div>
+        <img src="img/dest3.png">
+    </div>
+    <div>
+        <div class="caption">Lorem ipsum</div>
+        <img src="img/dest4.png">
+    </div>
+</div>
+```
 
 ### Author info ###
 
 * Author: Sebastian Lopez
 * Website: [http://sebaswebdev.com](http://sebaswebdev.com)
+
+Did you find this plugin useful? Feel free to send donations to [https://www.paypal.me/SebasWebDev](https://www.paypal.me/SebasWebDev)
