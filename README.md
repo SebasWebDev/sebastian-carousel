@@ -112,4 +112,7 @@ The editorial theme allows you to add a caption to your pictures:
 * Author: Sebastian Lopez
 * Website: [http://sebaswebdev.com](http://sebaswebdev.com)
 
+## Donations ##
 Did you find this plugin useful? Feel free to send donations to [https://www.paypal.me/SebasWebDev](https://www.paypal.me/SebasWebDev)
+
+Thanks in advance!
