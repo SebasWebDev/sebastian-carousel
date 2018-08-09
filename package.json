@@ -1,6 +1,6 @@
 {
   "name": "sebastian-carousel",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Carousel animation plugin",
   "main": "./src/js/sebastian-carousel.js",
   "scripts": {

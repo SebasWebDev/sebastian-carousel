@@ -10,18 +10,23 @@
             margin: 0;
             padding: 0;
         }
+
         html * {
             box-sizing: border-box;
         }
+
         body {
             font-family: Arial, sans-serif;
         }
+
         header h1 {
             text-align: center;
         }
+
         article {
             width: 100%;
         }
+
         section {
             width: 100%;
             max-width: 1110px;
@@ -30,12 +35,19 @@
             margin-right: auto;
             overflow: hidden;
         }
+
         section.fullwidth {
             max-width: 100%;
             padding-left: 0;
             padding-right: 0;
         }
-        @media screen and (max-width: 767px){
+
+        pre {
+            background-color: #e6e6e6;
+            padding: 15px;
+        }
+
+        @media screen and (max-width: 767px) {
             section {
                 padding-left: 0;
                 padding-right: 0;
@@ -51,7 +63,7 @@
         <section>
             <h2>Full Width carousel</h2>
         </section>
-        <div id="home-carousel" data-sc data-sc-theme="fullwidth" data-sc-autostart="true">
+        <div data-sc data-sc-theme="fullwidth" data-sc-autostart="true">
             <div>
                 <img src="img/home1.jpg">
             </div>
@@ -68,6 +80,27 @@
                 <img src="img/home5.jpg">
             </div>
         </div>
+        <section>
+            <h4>HTML of the example:</h4>
+            <pre>
+&lt;div data-sc data-sc-theme="fullwidth" data-sc-autostart="true"&gt;
+    &lt;div&gt;
+        &lt;img src="img/home1.jpg"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;img src="img/home2.jpg"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;img src="img/home3.jpg"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;img src="img/home4.jpg"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;img src="img/home5.jpg"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+        </section>
     </section>
     <section>
         <h2>Carousel with editorial</h2>
@@ -90,10 +123,31 @@
                 <img src="img/dest4.png">
             </div>
         </div>
+        <br><br>
+        <h4>HTML of the example:</h4>
+        <pre>
+&lt;div data-sc data-sc-theme="editorial" data-sc-effect="slide"&gt;
+    &lt;div&gt;
+        &lt;div class="caption"&gt;Lorem ipsum&lt;/div&gt;
+        &lt;img src="img/dest1.png"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class="caption"&gt;Lorem ipsum&lt;/div&gt;
+        &lt;img src="img/dest2.png"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class="caption"&gt;Lorem ipsum&lt;/div&gt;
+        &lt;img src="img/dest3.png"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class="caption"&gt;Lorem ipsum&lt;/div&gt;
+        &lt;img src="img/dest4.png"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
     </section>
     <section>
         <h2>Carousel with Content</h2>
-        <p>Dark theme</p>
+        <h3>Dark theme</h3>
         <div data-sc data-sc-theme="content-dark">
             <div data-sc-slider>
                 <div>
@@ -116,7 +170,30 @@
                 Lorem ipsum
             </div>
         </div>
-        <p>Light theme</p>
+        <br><br>
+        <h4>HTML of the example:</h4>
+        <pre>
+&lt;div data-sc data-sc-theme="content-dark"&gt;
+    &lt;div data-sc-slider&gt;
+        &lt;div&gt;
+            &lt;img src="img/soci1.png"&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;img src="img/soci2.png"&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;img src="img/soci3.png"&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;img src="img/soci4.png"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div data-sc-content&gt;
+        Lorem ipsum
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+        <br><br>
+        <h3>Light theme</h3>
         <div data-sc data-sc-theme="content-light">
             <div data-sc-slider>
                 <div>
@@ -139,6 +216,28 @@
                 Lorem ipsum
             </div>
         </div>
+        <br><br>
+        <h4>HTML of the example:</h4>
+        <pre>
+&lt;div data-sc data-sc-theme="content-light"&gt;
+    &lt;div data-sc-slider&gt;
+        &lt;div&gt;
+            &lt;img src="img/soci1.png"&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;img src="img/soci2.png"&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;img src="img/soci3.png"&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;img src="img/soci4.png"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div data-sc-content&gt;
+        Lorem ipsum
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
     </section>
 </article>
 <script src="js/sebastian-carousel.js"></script>

@@ -31,50 +31,58 @@ SebastianCarousel.prototype = {
             if (sliderWrapper) this.element = sliderWrapper;
         }
         var bulletWrapper = this.createElement('UL', namespace + '__bullets');
-        for (var i = 0; i < this.element.children.length; i++) {
-            var currCh = this.element.children[i];
-            var bullet = this.createElement('LI', namespace + '__bullet');
-            bullet.setAttribute('data-index', i);
-            bullet.addEventListener('click', function(e) {
-                console.log(e.target);
-                var target = e.target;
-                carousel.resetTimer();
-                carousel.goToSlide(target.getAttribute('data-index'));
-            });
-            if (i === 0) {
-                currCh.classList.add(namespace + '__slide--active');
-                bullet.classList.add(namespace + '__bullet--active');
+        if (this.element.children.length) {
+            if (this.element.children.length === 1) {
+                this.element.children[0].classList.add(namespace + '__slide--active');
+                this.element.children[0].classList.add(namespace + '__slide');
+                this.index = 0;
+            } else {
+                for (var i = 0; i < this.element.children.length; i++) {
+                    var currCh = this.element.children[i];
+                    var bullet = this.createElement('LI', namespace + '__bullet');
+                    bullet.setAttribute('data-index', i);
+                    bullet.addEventListener('click', function(e) {
+                        var target = e.target;
+                        carousel.resetTimer();
+                        carousel.goToSlide(target.getAttribute('data-index'));
+                    });
+                    if (i === 0) {
+                        currCh.classList.add(namespace + '__slide--active');
+                        bullet.classList.add(namespace + '__bullet--active');
+                    }
+                    if (i === 1) {
+                        currCh.classList.add(namespace + '__slide--next');
+                    }
+                    if (i === this.element.children.length - 1) {
+                        currCh.classList.add(namespace + '__slide--prev');
+                    }
+                    bulletWrapper.appendChild(bullet);
+                    currCh.classList.add(namespace + '__slide');
+                }
+                this.element.appendChild(bulletWrapper);
+                this.bullets = this.element.querySelectorAll('.' + namespace + '__bullet');
+                var arrLeft = this.createElement('A', namespace + '__left');
+                var arrRight = this.createElement('A', namespace + '__right');
+                this.element.appendChild(arrLeft);
+                this.element.appendChild(arrRight);
+                arrRight.addEventListener('click', function() {
+                    carousel.resetTimer();
+                    carousel.slide('right');
+                });
+                arrLeft.addEventListener('click', function() {
+                    carousel.resetTimer();
+                    carousel.slide('left');
+                });
+                window.addEventListener('resize', function() {
+                    carousel.updateHight()
+                });
+                if (this.options.autoStart) {
+                    this.setTimer();
+                }
+
             }
-            if (i === 1) {
-                currCh.classList.add(namespace + '__slide--next');
-            }
-            if (i === this.element.children.length - 1) {
-                currCh.classList.add(namespace + '__slide--prev');
-            }
-            bulletWrapper.appendChild(bullet);
-            currCh.classList.add(namespace + '__slide');
-        }
-        this.slides = this.element.querySelectorAll('.sebas-carousel__slide');
-        this.element.appendChild(bulletWrapper);
-        this.bullets = this.element.querySelectorAll('.sebas-carousel__bullet');
-        var arrLeft = this.createElement('A', namespace + '__left');
-        var arrRight = this.createElement('A', namespace + '__right');
-        this.element.appendChild(arrLeft);
-        this.element.appendChild(arrRight);
-        this.updateHight();
-        arrRight.addEventListener('click', function() {
-            carousel.resetTimer();
-            carousel.slide('right');
-        });
-        arrLeft.addEventListener('click', function() {
-            carousel.resetTimer();
-            carousel.slide('left');
-        });
-        window.addEventListener('resize', function() {
-            carousel.updateHight()
-        });
-        if (this.options.autoStart) {
-            this.setTimer();
+            this.slides = this.element.querySelectorAll('.' + namespace + '__slide');
+            this.updateHight();
         }
     },
     /**
@@ -94,7 +102,7 @@ SebastianCarousel.prototype = {
         this.element.querySelector('.' + nextClass).classList.remove(nextClass);
         this.element.querySelector('.' + bullClass).classList.remove(bullClass);
 
-        switch(dir) {
+        switch (dir) {
             case 'left':
                 this.index = this.index === 0 ? max : this.index - 1;
                 break;
@@ -173,7 +181,7 @@ SebastianCarousel.prototype = {
     sanitizeOptions: function(k, val) {
         var result,
             message = 'The option ' + k + ' does not have a valid value.';
-        switch(k) {
+        switch (k) {
             case 'effect':
                 result = !!val.match(/^(?:fade|slide)$/);
                 message += ' The value should be either fade or slide';
@@ -196,7 +204,8 @@ SebastianCarousel.prototype = {
         if (!result)
             console.warn(message);
         return result;
-    }
+    },
+    version: '1.0.1'
 };
 
 document.addEventListener('DOMContentLoaded', function() {
